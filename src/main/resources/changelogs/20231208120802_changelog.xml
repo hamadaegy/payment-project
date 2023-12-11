@@ -1,0 +1,46 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="ahmed.gamal.ahmed (generated)" id="1702037295579-1">
+        <createTable tableName="Account">
+            <column name="account_Number" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="AccountPK"/>
+            </column>
+            <column name="balance" type="DECIMAL(38, 2)"/>
+            <column name="currency" type="VARCHAR(255)"/>
+            <column name="client_id" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ahmed.gamal.ahmed (generated)" id="1702037295579-2">
+        <createTable tableName="Client">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="ClientPK"/>
+            </column>
+            <column name="address" type="VARCHAR(255)"/>
+            <column name="age" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gender" type="VARCHAR(255)"/>
+            <column name="job" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="telephoneNumber" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ahmed.gamal.ahmed (generated)" id="1702037295579-3">
+        <createTable tableName="Transaction">
+            <column name="transaction_Id" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="TransactionPK"/>
+            </column>
+            <column name="amount" type="VARCHAR(255)"/>
+            <column name="currency" type="VARCHAR(255)"/>
+            <column name="localDateTime" type="datetime(6)"/>
+            <column name="toAccount" type="VARCHAR(255)"/>
+            <column name="account_id" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ahmed.gamal.ahmed (generated)" id="1702037295579-4">
+        <addForeignKeyConstraint baseColumnNames="account_id" baseTableName="Transaction" constraintName="FK60ogq0ga4x4y0fkeu24tgm0kv" deferrable="false" initiallyDeferred="false" referencedColumnNames="account_Number" referencedTableName="Account" validate="true"/>
+    </changeSet>
+    <changeSet author="ahmed.gamal.ahmed (generated)" id="1702037295579-5">
+        <addForeignKeyConstraint baseColumnNames="client_id" baseTableName="Account" constraintName="FKpei4spdwejr1mbu98yngbojd8" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="Client" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

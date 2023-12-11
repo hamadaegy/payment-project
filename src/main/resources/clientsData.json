@@ -1,0 +1,86 @@
+{
+  "clients": [
+    {
+      "id": "1",
+      "name": "Jack",
+      "gender": "male",
+      "address": "klijanu iela 19-Riga",
+      "job":"Software developer",
+      "telephoneNumber":"2822871",
+      "accounts": [
+        {
+          "accountNumber": "USD11-11-111",
+          "balance": "100.0",
+          "currency": "USD"
+        },
+        {
+          "accountNumber": "SAR11-11-111",
+          "balance": "100.0",
+          "currency": "SAR"
+        },
+        {
+          "accountNumber": "QAR11-11-111",
+          "balance": "100.0",
+          "currency": "QAR"
+        }
+      ]
+    },
+
+    {
+      "id": "2",
+      "name": "Edjars",
+      "gender": "male",
+      "address": "Brivibas iela 110-Riga",
+      "job":"Teacher",
+      "telephoneNumber":"2177871",
+      "accounts": [
+        {
+          "accountNumber": "EUR22-22-222",
+          "balance": "100.0",
+          "currency": "EUR"
+        },
+        {
+          "accountNumber": "PLN22-22-222",
+          "balance": "100.0",
+          "currency": "PLN"
+        }
+      ]
+    },
+
+    {
+      "id": "3",
+      "name": "Baiba",
+      "gender": "female",
+      "address": "kapsala iela 10-Riga",
+      "job":"sales",
+      "telephoneNumber":"1199872",
+      "accounts": [
+        {
+          "accountNumber": "EUR33-33-333",
+          "balance": "100.0",
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Arvils",
+      "gender": "male",
+      "address": "Dizirrnavu iela 10-Riga",
+      "job":"doctor",
+      "telephoneNumber":"2899871",
+      "accounts": [
+        {
+          "accountNumber": "EUR44-44-444",
+          "balance": "100.0",
+          "currency": "EUR"
+        },
+        {
+          "accountNumber": "GBP44-44-444",
+          "balance": "100.0",
+          "currency": "GBP"
+        }
+      ]
+    }
+  ]
+}
